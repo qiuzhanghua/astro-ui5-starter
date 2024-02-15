@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SvelteButton from "../components/SvelteButton.svelte";
+---
+
+<Layout title="Hello UI5">
+  <SvelteButton client:only>With Add</SvelteButton>
+  <ui5-button id="btn" icon="tnt/actor" design="Emphasized"
+    >UI5 button in Astro</ui5-button
+  >
+  <ui5-input placeholder="UI5 input in Astro"></ui5-input>
+  <ui5-date-picker></ui5-date-picker>
+  <script>
+    document.getElementById("btn")?.addEventListener("click", () => {
+      alert("Hello, UI5 Web Components!");
+    });
+  </script>
+</Layout>
+
+<script>
+  import "@ui5/webcomponents-base/dist/features/OpenUI5Support.js";
+  import { setLanguage } from "@ui5/webcomponents-base/dist/config/Language.js";
+  import { setTheme } from "@ui5/webcomponents-base/dist/config/Theme.js";
+
+  import "@ui5/webcomponents/dist/Button.js";
+  import "@ui5/webcomponents/dist/Input.js";
+  import "@ui5/webcomponents/dist/DatePicker.js";
+  import "@ui5/webcomponents-icons/dist/AllIcons.js";
+  import "@ui5/webcomponents-icons-tnt/dist/AllIcons.js";
+  import "@ui5/webcomponents-icons-business-suite/dist/AllIcons.js";
+  import "@ui5/webcomponents/dist/Assets.js";
+
+  // setLanguage("zh-CN");
+  // setTheme("sap_fiori_3_hcw");
+  setTheme("sap_fiori_3_dark");
+</script>
