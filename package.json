@@ -22,7 +22,7 @@
     "@ui5/webcomponents-icons": "^1.23.1",
     "@ui5/webcomponents-icons-business-suite": "^1.23.1",
     "@ui5/webcomponents-icons-tnt": "^1.23.1",
-    "astro": "^4.5.3",
+    "astro": "^4.5.5",
     "autoprefixer": "^10.4.18",
     "nanostores": "^0.10.0",
     "postcss": "^8.4.28",
@@ -31,7 +31,7 @@
     "typescript": "^5.4.2"
   },
   "devDependencies": {
-    "@types/node": "^20.11.27",
+    "@types/node": "^20.11.28",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0"
   }
